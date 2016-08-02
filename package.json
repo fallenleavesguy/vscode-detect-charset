@@ -1,0 +1,37 @@
+{
+  "name": "vscode-detect-charset",
+  "displayName": "vscode-detect-charset",
+  "description": "show real charset in status bar",
+  "version": "0.0.1",
+  "publisher": "yeluoqiuzhi",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.detectcharset"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.detectcharset",
+        "title": "detect file charset"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "jschardet": "^1.4.1"
+  }
+}
